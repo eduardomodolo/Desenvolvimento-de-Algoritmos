@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+int main()
 {
     int idade;
     printf("Digite a sua idade:");
