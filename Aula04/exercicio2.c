@@ -1,6 +1,6 @@
 //primeiro printa o numero 5 e posteriormente adiciona mais um na operação
 
-int main(int argc, char const *argv[])
+int main()
 {
     int i = 5;
     printf("%d\n", i++);

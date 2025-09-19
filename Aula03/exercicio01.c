@@ -3,7 +3,7 @@
 //comparação. Se os números forem iguais, exiba uma
 //mensagem apropriada.
 
-int main(int argc, char const *argv[])
+int main()
 {
     float num1;
     printf("Digite o primeiro numero:");
