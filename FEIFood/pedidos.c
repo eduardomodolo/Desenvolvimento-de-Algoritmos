@@ -74,14 +74,14 @@ void excluirPedido(int idUsuario) {
         if (pedidos[i].id == id && pedidos[i].idUsuario == idUsuario)
             pos = i;
     if (pos == -1) {
-        printf("Pedido não encontrado.\n");
+        printf("Pedido nao encontrado.\n");
         return;
     }
     for (int i = pos; i < totalPedidos - 1; i++)
         pedidos[i] = pedidos[i + 1];
     totalPedidos--;
     salvarPedidos();
-    printf("Pedido excluído com sucesso!\n");
+    printf("Pedido excluido com sucesso!\n");
 }
 
 void avaliarPedido(int idUsuario) {
@@ -106,9 +106,9 @@ void avaliarPedido(int idUsuario) {
             }
             salvarPedidos();
             salvarComidas();
-            printf("Avaliação registrada!\n");
+            printf("Avaliacao registrada!\n");
             return;
         }
     }
-    printf("Pedido não encontrado ou já avaliado.\n");
+    printf("Pedido nao encontrado ou ja avaliado.\n");
 }

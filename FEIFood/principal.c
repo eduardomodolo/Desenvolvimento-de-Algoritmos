@@ -11,7 +11,7 @@ int main() {
     carregarComidas();
     carregarPedidos();
 
-    // cria admin padrão se não existir
+    // cria admin padrao se nao existir
     int temAdmin = 0;
     for (int i = 0; i < totalUsuarios; i++)
         if (usuarios[i].ehAdmin) temAdmin = 1;
@@ -19,16 +19,16 @@ int main() {
         Usuario adm = { proximoIdUsuario(), "admin", "admin", 1 };
         usuarios[totalUsuarios++] = adm;
         salvarUsuarios();
-        printf("Administrador padrão criado: login=admin, senha=admin\n");
+        printf("Administrador padrao criado: login=admin, senha=admin\n");
     }
 
     char op[10];
     while (1) {
-        printf("\n=== FEIFOOD ===\n");
-        printf("1 - Cadastrar novo usuário\n");
-        printf("2 - Login como usuário\n");
+        printf("\n== FEIFOOD ==\n");
+        printf("1 - Cadastrar novo usuario\n");
+        printf("2 - Login como usuario\n");
         printf("3 - Login como administrador\n");
-        printf("0 - Sair\nOpção: ");
+        printf("0 - Sair\nOpcao: ");
         lerLinha(op, 10);
 
         if (op[0] == '1') cadastrarUsuario();
@@ -41,7 +41,7 @@ int main() {
                     printf("2 - Ver meus pedidos\n");
                     printf("3 - Excluir pedido\n");
                     printf("4 - Avaliar pedido\n");
-                    printf("0 - Sair\nOpção: ");
+                    printf("0 - Sair\nOpcao: ");
                     lerLinha(op, 10);
                     if (op[0] == '0') break;
                     else if (op[0] == '1') fazerPedido(idUser);
@@ -61,9 +61,9 @@ int main() {
                     printf("2 - Cadastrar comida\n");
                     printf("3 - Remover comida\n");
                     printf("4 - Listar comidas\n");
-                    printf("5 - Listar usuários\n");
-                    printf("6 - Estatísticas do sistema\n");
-                    printf("0 - Sair\nOpção: ");
+                    printf("5 - Listar usuarios\n");
+                    printf("6 - Estatisticas do sistema\n");
+                    printf("0 - Sair\nOpcao: ");
                     lerLinha(op, 10);
                     if (op[0] == '0') break;
                     else if (op[0] == '1') cadastrarEstabelecimento();

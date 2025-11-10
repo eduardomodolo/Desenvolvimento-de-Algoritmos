@@ -42,7 +42,7 @@ int proximoIdComida() {
 
 void cadastrarComida() {
     if (totalComidas >= MAX_COMIDAS) {
-        printf("Limite máximo atingido.\n");
+        printf("Limite maximo atingido.\n");
         return;
     }
     char nome[100], buf[50];
@@ -52,7 +52,7 @@ void cadastrarComida() {
     printf("\n=== CADASTRAR COMIDA ===\n");
     printf("Nome da comida: ");
     lerLinha(nome, 100);
-    printf("Preço: ");
+    printf("Preco: ");
     lerLinha(buf, 50); preco = atof(buf);
     printf("ID do estabelecimento: ");
     lerLinha(buf, 50); idEstab = atoi(buf);
@@ -73,7 +73,7 @@ void removerComida() {
     for (int i = 0; i < totalComidas; i++)
         if (comidas[i].id == id) pos = i;
     if (pos == -1) {
-        printf("Comida não encontrada.\n");
+        printf("Comida nao encontrada.\n");
         return;
     }
     for (int i = pos; i < totalComidas - 1; i++)
@@ -87,13 +87,13 @@ void listarComidas() {
     printf("\n=== LISTA DE COMIDAS ===\n");
     for (int i = 0; i < totalComidas; i++) {
         double media = (comidas[i].qtdAvaliacoes == 0) ? 0 : comidas[i].somaNotas / comidas[i].qtdAvaliacoes;
-        printf("ID: %d | %s | R$ %.2f | Média: %.1f\n",
+        printf("ID: %d | %s | R$ %.2f | Media: %.1f\n",
                comidas[i].id, comidas[i].nome, comidas[i].preco, media);
     }
 }
 
 void mostrarEstatisticas() {
-    printf("\n=== ESTATÍSTICAS ===\n");
+    printf("\n=== ESTATISTICAS ===\n");
     printf("Total de comidas: %d\n", totalComidas);
 
     if (totalComidas == 0) return;

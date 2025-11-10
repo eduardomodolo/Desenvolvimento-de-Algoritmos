@@ -38,11 +38,11 @@ int proximoIdUsuario() {
 
 void cadastrarUsuario() {
     char login[50], senha[50];
-    printf("\n=== CADASTRO DE USUÁRIO ===\n");
+    printf("\n=== CADASTRO DE USUARIO ===\n");
     printf("Login: "); lerLinha(login, 50);
     for (int i = 0; i < totalUsuarios; i++) {
         if (strcmp(usuarios[i].login, login) == 0) {
-            printf("Usuário já existe!\n");
+            printf("Usuario ja existe!\n");
             return;
         }
     }
@@ -52,7 +52,7 @@ void cadastrarUsuario() {
     strcpy(novo.senha, senha);
     usuarios[totalUsuarios++] = novo;
     salvarUsuarios();
-    printf("Usuário cadastrado com sucesso! ID: %d\n", novo.id);
+    printf("Usuario cadastrado com sucesso! ID: %d\n", novo.id);
 }
 
 int loginUsuario(int *id) {
@@ -86,7 +86,7 @@ int loginAdministrador(int *id) {
 }
 
 void listarUsuarios() {
-    printf("\n=== LISTA DE USUÁRIOS ===\n");
+    printf("\n=== LISTA DE USUARIOS ===\n");
     for (int i = 0; i < totalUsuarios; i++) {
         printf("ID: %d | Login: %s | Tipo: %s\n",
                usuarios[i].id,
