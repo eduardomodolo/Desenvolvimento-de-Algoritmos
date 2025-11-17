@@ -1,0 +1,2 @@
+1;admin;admin;1
+2;eduardo;eduardo;0
